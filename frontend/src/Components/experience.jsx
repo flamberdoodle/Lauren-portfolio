@@ -1,0 +1,10 @@
+function Experience() {
+  return (
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Here is a list of my professional experiences and projects.</p>
+    </section>
+  );
+}
+
+export default Experience;
