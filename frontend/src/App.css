@@ -1,10 +1,21 @@
 /* Navigation bar styles */
+body{
+  background-color: #b7c48b;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/Quicksand.ttf") format("truetype");
+  /* font-weight: normal; */
+  font-style: normal;
+}
+
 .navbar {
   position: sticky;
-  top: 20px;
+  top: 0px;
   z-index: 1000;
 
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 
   margin: 20px auto 0 auto;
@@ -15,36 +26,51 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: #A1B076;
-  border: 1px solid #536036;
-  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    #b7c48b 10%,
+    #a1b076 30%,
+    #788552 60%,
+    #536036 100%
+  );
 
-  padding: 0.55rem 0.75rem;
+  /* box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.35),
+    inset 0 -2px 4px rgba(0,0,0,0.2),
+    0 8px 20px rgba(0,0,0,0.15); */
 
-  box-shadow:
+  /* border-radius: 100px; */
+  padding-top: 0.25rem;
+  padding-bottom: 2.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  /* box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.15),
-    0 4px 8px rgba(0, 0, 0, 0.1);
+    0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar-logo {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: Bold;
   padding: 0.6rem 1rem;
   border-radius: 999px;
-  color: #536036;
+  color: #3D4728;
   text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
 
-  transition:
+  /* transition:
     background-color 0.3s ease,
     color 0.3s ease,
-    transform 0.2s ease;
+    transform 0.2s ease; */
 }
 
-.navbar-logo:hover {
+/* .navbar-logo:hover {
   color: #f7eddb;
   background-color: #536036;
   transform: translateY(-2px);
-}
+} */
 
 .navbar-links {
   display: flex;
@@ -58,7 +84,9 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: #536036;
+  color: #3D4728;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
   font-size: 1rem;
   font-weight: 500;
 
@@ -78,13 +106,14 @@
 }
 
 section {
+  background-color: #536036;
   padding: 5rem 2rem;
   min-height: 60vh;
 }
 
 #home {
-  background-color: #f7eddb;
-  min-height: 90vh;
+  background-color: #536036;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
