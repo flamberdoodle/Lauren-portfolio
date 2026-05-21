@@ -1,26 +1,29 @@
 /* Navigation bar styles */
 
+/* Navigation bar styles */
+
 :root {
-  --terracotta: #C05C35;
-  --burnt-orange: #A0361B;
-  --earthy-green: #5E4725;
-  --golden-apricot: #EDA24E;
-  --soft-beige: #F7EDDB;
-  --sage-green: #A1B076;
-  --olive-green: #536036;
-  --dark-olive: #2F361D;
+  --gold: #D9BF77;
+  --terracotta: #A45A3D;
+  --copper: #B86B4A;
+  --dark-walnut: #462216;
+  --walnut: #6b3b26;
+  --walnut-red: #451b0c;
+  --light-red: #e4d6c3;
+  --stone: #C4B6A6;
+  --cream: #E8DAB2;
 }
 
 @font-face {
   font-family: "Quicksand";
   src: url("./assets/Quicksand.ttf") format("truetype");
-  /* font-weight: normal; */
   font-style: normal;
 }
+
 body {
   margin: 0;
-  background-color: var(--dark-olive);
-  color: var(--soft-beige);
+  background-color: var(--walnut-red);
+  color: var(--cream);
   font-family: "Quicksand", sans-serif;
 }
 
@@ -29,7 +32,8 @@ body {
   top: 0;
   z-index: 1000;
 
-  background-color: rgba(47, 54, 29, 0.78);
+  background-color: rgba(69, 27, 12, 0.6);
+
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
@@ -40,15 +44,17 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -30px;
+  bottom: -50px;
 
   width: 100%;
-  height: 30px;
+  height: 50px;
 
   background: linear-gradient(
     to bottom,
-    rgba(47, 54, 29, 0.45),
-    rgba(47, 54, 29, 0)
+    rgba(69, 27, 12, 0.4),
+    rgba(69, 27, 12, 0),
+    /* rgba(107, 66, 38, 0.4), */
+    /* rgba(107, 66, 38, 0) */
   );
 
   pointer-events: none;
@@ -57,17 +63,19 @@ body {
 .navbar-container {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 }
 
 .navbar-logo {
-  color: var(--soft-beige);
+  color: var(--cream);
   text-decoration: none;
+
   position: relative;
   display: inline-flex;
   align-items: center;
+
   padding: 0rem 0.5rem;
   margin-right: 6rem;
+
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -76,7 +84,8 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: .5rem;
+
+  gap: 0.5rem;
 
   list-style: none;
   margin: 0;
@@ -84,8 +93,9 @@ body {
 }
 
 .navbar-links a {
-  color: var(--soft-beige);
+  color: var(--cream);
   text-decoration: none;
+
   position: relative;
 
   display: inline-flex;
@@ -117,21 +127,21 @@ body {
 .navbar-links a::before {
   left: 0;
 
-  border-left: 3px solid var(--sage-green);
-  border-top: 3px solid var(--sage-green);
-  border-bottom: 3px solid var(--sage-green);
+  border-left: 3px solid var(--gold);
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
 }
 
 .navbar-links a::after {
   right: 0;
 
-  border-right: 3px solid var(--sage-green);
-  border-top: 3px solid var(--sage-green);
-  border-bottom: 3px solid var(--sage-green);
+  border-right: 3px solid var(--gold);
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
 }
 
 .navbar-links a:hover {
-  color: var(--golden-apricot);
+  color: var(--gold);
 }
 
 .navbar-links a:hover::before,
@@ -141,25 +151,29 @@ body {
 
 .home-page {
   min-height: 90vh;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   align-items: center;
+
   padding: 3rem 6rem;
   gap: 3rem;
 }
 
 .home-text h1 {
   font-size: 4rem;
-  margin: 0;
+  color: var(--cream);
+  margin: 20px 50px;
 }
 
 .home-text h2 {
   font-size: 2.5rem;
-  color: var(--soft-beige);
+  color: var(--cream);
 }
 
 .accent {
-  color: var(--earthy-green);
+  color: var(--walnut);
 }
 
 .home-buttons {
@@ -173,16 +187,33 @@ body {
   padding: 0.9rem 1.4rem;
   text-decoration: none;
   font-weight: 700;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .primary-button {
-  background-color: var(--earthy-green);
-  color: var(--soft-beige);
+  background-color: var(--walnut);
+  color: var(--cream);
+}
+
+.primary-button:hover {
+  background-color: var(--gold);
+  color: var(--walnut);
+  transform: translateY(-2px);
 }
 
 .secondary-button {
-  border: 2px solid var(--earthy-green);
-  color: var(--soft-beige);
+  border: 2px solid var(--gold);
+  color: var(--cream);
+}
+
+.secondary-button:hover {
+  background-color: var(--gold);
+  color: var(--walnut);
+  transform: translateY(-2px);
 }
 
 .home-visual {
@@ -193,8 +224,11 @@ body {
 .profile-circle {
   width: 350px;
   height: 350px;
+
   border-radius: 50%;
-  background-color: var(--earthy-green);
+
+  background-color: var(--walnut);
+
   display: flex;
   align-items: center;
   justify-content: center;
