@@ -1,11 +1,11 @@
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/navbar";
 import Home from "./Components/Home";
-import About from "./Components/About";
-import Contact from "./Components/Contact";
-import Art from "./Components/Art";
+import About from "./Components/about";
+import Contact from "./Components/contact";
+import Art from "./Components/art";
 import GameDev from "./Components/GameDev";
 import Programming from "./Components/programming";
-import Projects from "./Components/Projects";
+import Projects from "./Components/projects";
 import RenderingAndAnim from "./Components/RenderingAndAnim";
 import ScrollToTop from "./Components/ScrollToTop";
 
