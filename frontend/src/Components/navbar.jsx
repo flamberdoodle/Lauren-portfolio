@@ -19,11 +19,23 @@ function Navbar() {
                         </Link>
                     </li>
 
-                    <li>
+                    <li className="nav-dropdown">
                         <Link to="/about">
                             About
                         </Link>
-                    </li>
+
+                        <ul className="dropdown-menu">
+                            <li>
+                            <Link to="/about#about">About Me</Link>
+                            </li>
+                            <li>
+                            <Link to="/about#experience">Experience</Link>
+                            </li>
+                            <li>
+                            <Link to="/about#skills">Skills</Link>
+                            </li>
+                        </ul>
+                        </li>
 
                 <li>
                     <Link to="/projects">
@@ -57,7 +69,7 @@ function Navbar() {
                     </ul> */}
                 {/* </li> */}
 
-        <li>
+        {/* <li>
           <Link to="/experience">
             Experience
           </Link>
@@ -67,7 +79,7 @@ function Navbar() {
           <Link to="/skills">
             Skills
           </Link>
-        </li>
+        </li> */}
 
         <li>
           <Link to="/contact">
