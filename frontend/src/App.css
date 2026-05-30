@@ -12,7 +12,12 @@ body,
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
+  background-color: var(--walnut-red);
+}
+
+main {
+  background-color: var(--walnut-red);
 }
 
 :root {
@@ -38,6 +43,7 @@ body {
   background-color: var(--walnut-red);
   color: var(--cream);
   font-family: "Quicksand", sans-serif;
+  height: 100vh;
 }
 
 .navbar {
@@ -195,18 +201,42 @@ body {
 }
 
 /* Homescreen styles ------------------------------------------*/ 
-
 .home-page {
-  min-height: calc(100vh - 120px);
+  min-height: 100vh;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
 
   align-items: center;
   justify-items: center;
 
-  padding: 0 6rem;
-  gap: 4rem;
+  padding: 0 6rem 4rem 6rem;
+  gap: 2rem 4rem;
+
+  background-color: var(--walnut-red);
+}
+
+.construction-banner {
+  grid-column: 1 / -1;
+  grid-row: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.construction-banner p {
+  margin: 0;
+}
+
+.home-text {
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .home-paragraph {
@@ -322,6 +352,10 @@ body {
   height: 500px;
 
   background-color: var(--walnut);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* about screen styles */

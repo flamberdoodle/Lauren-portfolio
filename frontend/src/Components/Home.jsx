@@ -1,6 +1,18 @@
+import constructionIcon from '../assets/Visuals/Construction_icon.png';
+
 function Home() {
   return (
     <main className="home-page">
+      <div className="construction-banner">
+        <img
+          src={constructionIcon}
+          alt="construction icon"
+          className="card-icon"
+        />
+
+        <p>Site under construction</p>
+      </div>
+
       <section className="home-text">
         <h1>Hello<span className="accent">.</span></h1>
         <h2>I&apos;m Lauren</h2>
