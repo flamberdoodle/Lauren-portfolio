@@ -539,6 +539,16 @@ body {
   color: var(--cream);
 }
 
+/* the headings for each individual project, eg. chess set */
+.projects-heading {
+  width: 820px;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+
+  color: var(--gold);
+  font-size: 1.75rem;
+}
+
 .section-description {
   width: 820px;
   margin-bottom: 4rem;
@@ -547,6 +557,7 @@ body {
   line-height: 1.6;
 }
 
+/* not needed anymore -------------- */
 .projects-stack {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -584,4 +595,72 @@ body {
 
 .project-link:hover {
   color: var(--cream);
+}
+/* ----------------------------------- */
+
+/* for the large/final project images */
+.main-image-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+}
+
+.main-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--gold);
+}
+
+.project-video {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+
+  border: 3px solid var(--gold);
+
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+
+/* for the process images */
+.image-stack {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.project-description-card {
+  text-align: left;
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto 2rem auto;
+  padding: 2rem;
+
+  background-color: var(--walnut);
+
+  border: 3px solid var(--gold);
+
+  box-sizing: border-box;
+}
+
+.project-description-card h3 {
+  color: var(--gold);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-description-card p {
+  color: var(--cream);
+  line-height: 1.7;
+}
+
+.project-description-card ul {
+  color: var(--cream);
+  padding-left: 1.5rem;
+}s
+
+.project-description-card li {
+  margin-bottom: 0.5rem;
 }
