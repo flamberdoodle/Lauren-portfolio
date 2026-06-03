@@ -1,4 +1,7 @@
 import chessSet from "../assets/Visuals/Lauren_Chess_Lighting.png";
+import kingAndBishop from "../assets/Visuals/King_and_bishop_uv.png";
+import queenAndRook from "../assets/Visuals/Queen_and_rook_uv.png";
+import pawnAndKnight from "../assets/Visuals/Pawn_and_knight_uv.png";
 
 function RenderingAndAnim() {
   return (
@@ -65,7 +68,36 @@ function RenderingAndAnim() {
             <li>Animation keyeing done in Unity</li>
           </ul>
         </div>
-        
+
+        <div className="image-stack">
+          <div className="image-card">
+            <p className="image-label">King and Bishop UV Map</p>
+            <img
+              src={kingAndBishop}
+              alt="King and Bishop UV Map"
+              className="image-stack-item"
+            />
+          </div>
+
+          <div className="image-card">
+            <p className="image-label">Queen and Rook UV Map</p>
+            <img
+              src={queenAndRook}
+              alt="Queen and Rook UV Map"
+              className="image-stack-item"
+            />
+          </div>
+
+          <div className="image-card">
+            <p className="image-label">Pawn and Knight UV Map</p>
+            <img
+              src={pawnAndKnight}
+              alt="Pawn and Knight UV Map"
+              className="image-stack-item"
+            />
+          </div>
+        </div>
+
         <p className="projects-heading">
           3D Hand
         </p>
